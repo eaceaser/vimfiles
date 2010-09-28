@@ -46,7 +46,7 @@ set gdefault
 set gfn=Menlo:h11
 
 " swapfile
-set directory=/Users/eac/.tmp
+set directory=~/.tmp
 set swapfile
 
 " statusline
@@ -67,21 +67,15 @@ set efm=%E\ %#[error]\ %f:%l:\ %m,%C\ %#[error]\ %p^,%-C%.%#,%Z,
        \%-G%.%#
 
 let g:zenburn_high_Contrast=1
-let g:fuf_mrufile_maxItem = 300
-let g:fuf_mrucmd_maxItem = 400
-let g:fuf_reuseWindow=1
 "let ruby_fold=1
 
 map <F8> :set number!<CR>
 map! <F8> :set number!<CR>
 
-"map <Left> :bp<CR>
-"map <Right> :bn<CR>
-
-nnoremap <silent> <C-n>         :FufBuffer<CR>
+"nnoremap <silent> <C-n>         :FufBuffer<CR>
 "nnoremap <silent> <C-[>         :FufRenewCache<CR>
-nnoremap <silent> <C-f>         :FufFileWithCurrentBufferDir<CR>
-nnoremap <silent> <C-p>         :FufFile **/<CR>
+"nnoremap <silent> <C-f>         :FufFileWithCurrentBufferDir<CR>
+"nnoremap <silent> <C-p>         :FufFile **/<CR>
 
 " wtf
 hi scalaNew gui=underline
