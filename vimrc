@@ -11,6 +11,7 @@ set sw=2
 set sts=2
 
 set nocompatible
+set ttyfast
 set backspace=2
 set hidden
 "set foldenable
@@ -26,6 +27,7 @@ set shortmess=atI
 set softtabstop=2
 set expandtab
 set incsearch
+set noerrorbells
 "set tags=tags
 "set tagrelative
 set bg=dark
@@ -48,6 +50,9 @@ set gfn=Menlo:h11
 " swapfile
 set directory=~/.tmp
 set swapfile
+
+set undofile
+set undodir=~/.vim/undo
 
 " statusline
 set laststatus=2
