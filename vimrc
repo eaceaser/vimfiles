@@ -1,66 +1,72 @@
-"set runtimepath^=/usr/local/share/vim/vim-ruby,/usr/local/share/vim/vim-fugitive
 set runtimepath^=~/.vim/bundle/vim-pathogen
 call pathogen#runtime_append_all_bundles()
 
+" General
 syntax on
 filetype indent on
 filetype plugin on 
+set autoread
 
-set ts=2
-set sw=2
-set sts=2
-
-set nocompatible
-set ttyfast
-set backspace=2
-set hidden
-"set foldenable
-set showmatch
-"set foldlevelstart=10
-set guioptions=egm
-set title
-set ignorecase
-set smartcase
-set cursorline
-set switchbuf=usetab
-set shortmess=atI
-set softtabstop=2
-set expandtab
-set incsearch
-set noerrorbells
-"set tags=tags
-"set tagrelative
-set bg=dark
-set hlsearch
-set mouse=a
+" Interface
 set wildmenu
 set wildmode=longest:full
-set nowrap
-set completeopt=menuone,longest
+set hidden
+set nocompatible
 set cmdheight=2
+set ttyfast
+set smartcase
+set cursorline
+set hlsearch
 set list
-set listchars=tab:>-,trail:.
+set shortmess=atI
 set ruler
-set linebreak
+set listchars=tab:>-,trail:.
+set ignorecase
+set incsearch
+set magic
+set mouse=a
+set showmatch
 set gdefault
+set noerrorbells
+set completeopt=menuone,longest
+set switchbuf=usetab
+
+" Font
 "set gfn=Consolas:h13
 "set gfn=Monaco:h11
 set gfn=Menlo:h11
+if has("gui_running")
+  colorscheme ir_black
+  set guioptions=egm
+endif
 
-" swapfile
-set directory=~/.tmp
-set swapfile
+" colors
+set bg=dark
 
+" swaps and backup
+set nobackup
+set nowb
+set noswapfile
 set undofile
 set undodir=~/.vim/undo
+
+" tabs and indentation
+set expandtab
+set linebreak
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+set backspace=2
+set autoindent
+set smartindent
+set nowrap
 
 " statusline
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
-if has("gui_running")
-    colorscheme ir_black
-endif
+" folds
+set foldmethod=marker
 
 if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --nocolor
@@ -72,15 +78,9 @@ set efm=%E\ %#[error]\ %f:%l:\ %m,%C\ %#[error]\ %p^,%-C%.%#,%Z,
        \%-G%.%#
 
 let g:zenburn_high_Contrast=1
-"let ruby_fold=1
 
 map <F8> :set number!<CR>
 map! <F8> :set number!<CR>
-
-"nnoremap <silent> <C-n>         :FufBuffer<CR>
-"nnoremap <silent> <C-[>         :FufRenewCache<CR>
-"nnoremap <silent> <C-f>         :FufFileWithCurrentBufferDir<CR>
-"nnoremap <silent> <C-p>         :FufFile **/<CR>
 
 " wtf
 hi scalaNew gui=underline
