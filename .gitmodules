@@ -22,3 +22,12 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
+[submodule "bundle/vim-addon-async"]
+	path = bundle/vim-addon-async
+	url = https://github.com/MarcWeber/vim-addon-async.git
+[submodule "bundle/vim-addon-completion"]
+	path = bundle/vim-addon-completion
+	url = https://github.com/MarcWeber/vim-addon-completion.git
+[submodule "bundle/vim-addon-json-encoding"]
+	path = bundle/vim-addon-json-encoding
+	url = https://github.com/MarcWeber/vim-addon-json-encoding.git
