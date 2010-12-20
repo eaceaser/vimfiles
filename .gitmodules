@@ -31,3 +31,24 @@
 [submodule "bundle/vim-addon-json-encoding"]
 	path = bundle/vim-addon-json-encoding
 	url = https://github.com/MarcWeber/vim-addon-json-encoding.git
+[submodule "ensime"]
+	path = ensime
+	url = https://github.com/MarcWeber/ensime.git
+[submodule "bundle/vim-addon-sbt"]
+	path = bundle/vim-addon-sbt
+	url = https://github.com/MarcWeber/vim-addon-sbt.git
+[submodule "bundle/vim-addon-mw-utils"]
+	path = bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/vim-addon-actions"]
+	path = bundle/vim-addon-actions
+	url = https://github.com/MarcWeber/vim-addon-actions.git
+[submodule "vim-addon-manager"]
+	path = vim-addon-manager
+	url = git://github.com/MarcWeber/vim-addon-manager.git
+[submodule "bundle/vim-addon-manager"]
+	path = bundle/vim-addon-manager
+	url = git://github.com/MarcWeber/vim-addon-manager.git
+[submodule "bundle/vim-addon-manager-known-repositories"]
+	path = bundle/vim-addon-manager-known-repositories
+	url = https://github.com/MarcWeber/vim-addon-manager-known-repositories.git

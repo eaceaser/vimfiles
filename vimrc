@@ -1,5 +1,8 @@
 set runtimepath^=~/.vim/bundle/vim-pathogen
 call pathogen#runtime_append_all_bundles()
+call scriptmanager#Activate(['vim-addon-sbt'])
+
+" ScriptManager options
 
 " General
 syntax on
