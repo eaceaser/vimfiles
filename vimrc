@@ -1,6 +1,7 @@
 set runtimepath^=~/.vim/bundle/vim-pathogen
 call pathogen#runtime_append_all_bundles()
-call scriptmanager#Activate(['vim-addon-sbt'])
+call scriptmanager#Activate()
+let g:vim_script_manager['plugin_root_dir']='~/.vim/addon-manager'
 
 " ScriptManager options
 
@@ -18,7 +19,7 @@ set nocompatible
 set cmdheight=2
 set ttyfast
 set smartcase
-set cursorline
+"set cursorline
 set hlsearch
 set list
 set shortmess=atI
@@ -37,7 +38,9 @@ set switchbuf=usetab
 " Font
 "set gfn=Consolas:h13
 "set gfn=Monaco:h11
-set gfn=Menlo:h11
+"set gfn=Menlo:h11
+set noantialias
+set gfn=fixed-6x13:h13
 if has("gui_running")
   colorscheme ir_black
   set guioptions=egm
@@ -69,7 +72,8 @@ set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " folds
-set foldmethod=marker
+set foldmethod=syntax
+set foldnestmax=2
 
 if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --nocolor
