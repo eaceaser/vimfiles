@@ -52,3 +52,6 @@
 [submodule "bundle/vim-addon-manager-known-repositories"]
 	path = bundle/vim-addon-manager-known-repositories
 	url = https://github.com/MarcWeber/vim-addon-manager-known-repositories.git
+[submodule "bundle/vim-scala"]
+	path = bundle/vim-scala
+	url = https://github.com/derekwyatt/vim-scala.git

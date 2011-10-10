@@ -1,5 +1,5 @@
-set runtimepath^=~/.vim/bundle/vim-pathogen
-call pathogen#runtime_append_all_bundles()
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
 call scriptmanager#Activate()
 let g:vim_script_manager['plugin_root_dir']='~/.vim/addon-manager'
 
@@ -7,8 +7,7 @@ let g:vim_script_manager['plugin_root_dir']='~/.vim/addon-manager'
 
 " General
 syntax on
-filetype indent on
-filetype plugin on 
+filetype plugin indent on
 set autoread
 
 " Interface
@@ -72,8 +71,8 @@ set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " folds
-set foldmethod=syntax
-set foldnestmax=2
+" set foldmethod=syntax
+" set foldnestmax=2
 
 if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --nocolor
@@ -90,7 +89,9 @@ map <F8> :set number!<CR>
 map! <F8> :set number!<CR>
 
 " wtf
-hi scalaNew gui=underline
-hi scalaMethodCall gui=italic
-hi scalaValName gui=underline
-hi scalaVarName gui=underline
+"hi scalaNew gui=underline
+"hi scalaMethodCall gui=italic
+"hi scalaValName gui=underline
+"hi scalaVarName gui=underline
+
+let loaded_matchparen = 0
