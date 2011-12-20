@@ -84,6 +84,7 @@ set efm=%E\ %#[error]\ %f:%l:\ %m,%C\ %#[error]\ %p^,%-C%.%#,%Z,
        \%-G%.%#
 
 let g:zenburn_high_Contrast=1
+colorscheme zenburn
 
 map <F8> :set number!<CR>
 map! <F8> :set number!<CR>
