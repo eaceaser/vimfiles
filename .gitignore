@@ -2,3 +2,5 @@ bundle/
 !bundle/vundle/
 undo/
 .netrwhist
+backup/
+tmp/

@@ -1,5 +1,5 @@
 " General
-syntax on
+syntax enable
 set autoread
 
 " Interface
@@ -32,9 +32,19 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'wincent/Command-T'
 Bundle 'derekwyatt/vim-scala'
+
+Bundle 'mutewinter/vim-indent-guides'
+Bundle 'Lokaltog/vim-powerline'
+
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-fugitive'
+
+Bundle 'IndexedSearch'
+Bundle 'Shougo/neocomplcache'
+Bundle 'acustodioo/vim-tmux'
+Bundle 'L9'
 
 filetype plugin indent on
 
@@ -50,11 +60,14 @@ endif
 set bg=dark
 
 " swaps and backup
-set nobackup
-set nowb
-set noswapfile
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
 set undofile
 set undodir=~/.vim/undo
+
+" enc
+set encoding=utf-8
 
 " tabs and indentation
 set expandtab
@@ -70,6 +83,9 @@ set nowrap
 " statusline
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" searching
+set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,*.class
 
 " folds
 " set foldmethod=syntax
@@ -97,3 +113,18 @@ map! <F8> :set number!<CR>
 "hi scalaVarName gui=underline
 
 let loaded_matchparen = 0
+
+" ---------------
+" Neocachecompl
+" ---------------
+let g:neocomplcache_enable_at_startup=1
+let g:neocomplcache_enable_auto_select=1 "Select the first entry automatically
+let g:neocomplcache_enable_cursor_hold_i=1
+let g:neocomplcache_cursor_hold_i_time=300
+let g:neocomplcache_auto_completion_start_length=1
+
+" ---------------
+" Indent Guides
+" ---------------
+let g:indent_guides_enable_on_vim_startup=1
+
