@@ -46,15 +46,16 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'acustodioo/vim-tmux'
 Bundle 'L9'
 
+Bundle 'sjl/badwolf'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tomasr/molokai'
+Bundle 'nanotech/jellybeans.vim'
+
 filetype plugin indent on
 
 " Font
 set noantialias
 set gfn=fixed-6x13:h13
-if has("gui_running")
-  colorscheme ir_black
-  set guioptions=egm
-endif
 
 " colors
 set bg=dark
@@ -100,8 +101,8 @@ set efm=%E\ %#[error]\ %f:%l:\ %m,%C\ %#[error]\ %p^,%-C%.%#,%Z,
        \%W\ %#[warn]\ %f:%l:\ %m,%C\ %#[warn]\ %p^,%-C%.%#,%Z,
        \%-G%.%#
 
-let g:zenburn_high_Contrast=1
-colorscheme zenburn
+" let g:zenburn_high_Contrast=1
+colorscheme molokai
 
 map <F8> :set number!<CR>
 map! <F8> :set number!<CR>
@@ -127,4 +128,12 @@ let g:neocomplcache_auto_completion_start_length=1
 " Indent Guides
 " ---------------
 let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_auto_colors=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
 
+" ---------------
+"  Powerline
+" ---------------
+" let g:Powerline_symbols = 'fancy'
+let g:Powerline_cache_enabled = 1
