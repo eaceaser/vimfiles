@@ -1,13 +1,5 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call scriptmanager#Activate()
-let g:vim_script_manager['plugin_root_dir']='~/.vim/addon-manager'
-
-" ScriptManager options
-
 " General
 syntax on
-filetype plugin indent on
 set autoread
 
 " Interface
@@ -34,10 +26,19 @@ set noerrorbells
 set completeopt=menuone,longest
 set switchbuf=usetab
 
+" Vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'derekwyatt/vim-scala'
+
+filetype plugin indent on
+
 " Font
-"set gfn=Consolas:h13
-"set gfn=Monaco:h11
-"set gfn=Menlo:h11
 set noantialias
 set gfn=fixed-6x13:h13
 if has("gui_running")
