@@ -1,6 +1,7 @@
 " General
 syntax enable
 set autoread
+set t_Co=256
 
 " Interface
 set wildmenu
