@@ -46,6 +46,7 @@ Bundle 'IndexedSearch'
 Bundle 'Shougo/neocomplcache'
 Bundle 'acustodioo/vim-tmux'
 Bundle 'L9'
+Bundle 'pig.vim'
 
 Bundle 'sjl/badwolf'
 Bundle 'altercation/vim-colors-solarized'
@@ -115,6 +116,10 @@ map! <F8> :set number!<CR>
 "hi scalaVarName gui=underline
 
 let loaded_matchparen = 0
+
+augroup filetypedetect 
+  au BufNewFile,BufRead *.pig set filetype=pig syntax=pig 
+augroup END 
 
 " ---------------
 " Neocachecompl
