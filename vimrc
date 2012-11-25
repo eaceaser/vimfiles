@@ -36,6 +36,9 @@ Bundle 'gmarik/vundle'
 Bundle 'wincent/Command-T'
 Bundle 'derekwyatt/vim-scala'
 
+Bundle 'pangloss/vim-javascript'
+Bundle 'kchmck/vim-coffee-script'
+
 Bundle 'mutewinter/vim-indent-guides'
 Bundle 'Lokaltog/vim-powerline'
 
@@ -51,13 +54,19 @@ Bundle 'pig.vim'
 Bundle 'sjl/badwolf'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tomasr/molokai'
+Bundle 'myhere/vim-nodejs-complete'
 Bundle 'nanotech/jellybeans.vim'
+
+Bundle 'godlygeek/tabular'
+Bundle 'mileszs/ack.vim'
+Bundle 'digitaltoad/vim-jade'
 
 filetype plugin indent on
 
 " Font
-set noantialias
-set gfn=fixed-6x13:h13
+set antialias
+set gfn=Anonymous\ Pro:h12
+" set gfn=fixed-6x13:h13
 
 " colors
 set bg=dark
