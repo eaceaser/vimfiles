@@ -33,13 +33,12 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'wincent/Command-T'
+"Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 Bundle 'derekwyatt/vim-scala'
 
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
-
-Bundle 'mutewinter/vim-indent-guides'
 Bundle 'Lokaltog/vim-powerline'
 
 Bundle 'scrooloose/nerdcommenter'
