@@ -1,4 +1,5 @@
 " General
+set shell=/bin/sh
 syntax enable
 set autoread
 set t_Co=256
@@ -11,7 +12,7 @@ set nocompatible
 set cmdheight=2
 set ttyfast
 set smartcase
-"set cursorline
+set cursorline
 set hlsearch
 set list
 set shortmess=atI
@@ -38,13 +39,14 @@ Bundle 'derekwyatt/vim-scala'
 
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
+
+Bundle 'airblade/vim-gitgutter'
 
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-fugitive'
 
 Bundle 'IndexedSearch'
-Bundle 'Shougo/neocomplcache'
 Bundle 'acustodioo/vim-tmux'
 Bundle 'L9'
 Bundle 'pig.vim'
@@ -56,7 +58,6 @@ Bundle 'myhere/vim-nodejs-complete'
 Bundle 'nanotech/jellybeans.vim'
 
 Bundle 'godlygeek/tabular'
-Bundle 'mileszs/ack.vim'
 Bundle 'digitaltoad/vim-jade'
 
 filetype plugin indent on
@@ -129,15 +130,6 @@ augroup filetypedetect
 augroup END 
 
 " ---------------
-" Neocachecompl
-" ---------------
-let g:neocomplcache_enable_at_startup=1
-let g:neocomplcache_enable_auto_select=1 "Select the first entry automatically
-let g:neocomplcache_enable_cursor_hold_i=1
-let g:neocomplcache_cursor_hold_i_time=300
-let g:neocomplcache_auto_completion_start_length=1
-
-" ---------------
 " Indent Guides
 " ---------------
 let g:indent_guides_enable_on_vim_startup=1
@@ -145,8 +137,4 @@ let g:indent_guides_auto_colors=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
 
-" ---------------
-"  Powerline
-" ---------------
-" let g:Powerline_symbols = 'fancy'
-let g:Powerline_cache_enabled = 1
+let g:airline_powerline_fonts = 1
