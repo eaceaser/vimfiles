@@ -12,7 +12,6 @@ set nocompatible
 set cmdheight=2
 set ttyfast
 set smartcase
-set cursorline
 set hlsearch
 set list
 set shortmess=atI
