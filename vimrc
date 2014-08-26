@@ -58,12 +58,13 @@ Bundle 'nanotech/jellybeans.vim'
 
 Bundle 'godlygeek/tabular'
 Bundle 'digitaltoad/vim-jade'
+Plugin 'plasticboy/vim-markdown'
 
 filetype plugin indent on
 
 " Font
 set antialias
-set gfn=Anonymous\ Pro:h12
+set gfn=Anonymice\ Powerline:h12
 " set gfn=fixed-6x13:h13
 
 " colors
