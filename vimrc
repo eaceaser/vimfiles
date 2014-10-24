@@ -27,6 +27,10 @@ set noerrorbells
 set completeopt=menuone,longest
 set switchbuf=usetab
 
+" Spellcheck
+" set spell
+" set spelllang=en
+
 " Vundle
 filetype off
 set rtp+=~/.vim/bundle/vundle
@@ -58,6 +62,7 @@ Bundle 'nanotech/jellybeans.vim'
 
 Bundle 'godlygeek/tabular'
 Bundle 'digitaltoad/vim-jade'
+Bundle 'reedes/vim-pencil'
 Plugin 'plasticboy/vim-markdown'
 
 filetype plugin indent on
@@ -138,3 +143,10 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
 
 let g:airline_powerline_fonts = 1
+
+" Markdown
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
