@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 " General
 set shell=/bin/sh
 syntax enable
@@ -31,39 +33,33 @@ set switchbuf=usetab
 " set spell
 " set spelllang=en
 
-" Vundle
-filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
-Bundle 'derekwyatt/vim-scala'
-
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'bling/vim-airline'
-
-Bundle 'airblade/vim-gitgutter'
-
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-fugitive'
-
-Bundle 'IndexedSearch'
-Bundle 'acustodioo/vim-tmux'
-Bundle 'L9'
-Bundle 'pig.vim'
-
-Bundle 'sjl/badwolf'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tomasr/molokai'
-Bundle 'myhere/vim-nodejs-complete'
-Bundle 'nanotech/jellybeans.vim'
-
-Bundle 'godlygeek/tabular'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'reedes/vim-pencil'
-Plugin 'plasticboy/vim-markdown'
+" Bundle 'gmarik/vundle'
+" Bundle 'kien/ctrlp.vim'
+" Bundle 'derekwyatt/vim-scala'
+" 
+" Bundle 'pangloss/vim-javascript'
+" Bundle 'kchmck/vim-coffee-script'
+" Bundle 'bling/vim-airline'
+" Bundle 'junegunn/goyo.vim'
+" 
+" Bundle 'airblade/vim-gitgutter'
+" 
+" Bundle 'scrooloose/nerdcommenter'
+" 
+" Bundle 'IndexedSearch'
+" Bundle 'acustodioo/vim-tmux'
+" Bundle 'L9'
+" Bundle 'pig.vim'
+" 
+" Bundle 'sjl/badwolf'
+" Bundle 'altercation/vim-colors-solarized'
+" Bundle 'myhere/vim-nodejs-complete'
+" Bundle 'nanotech/jellybeans.vim'
+" 
+" Bundle 'godlygeek/tabular'
+" Bundle 'digitaltoad/vim-jade'
+" Bundle 'reedes/vim-pencil'
+" Plugin 'tpope/vim-markdown'
 
 filetype plugin indent on
 
@@ -134,6 +130,8 @@ augroup filetypedetect
   au BufNewFile,BufRead *.pig set filetype=pig syntax=pig 
 augroup END 
 
+autocmd FileType mkd setlocal spell
+
 " ---------------
 " Indent Guides
 " ---------------
@@ -147,6 +145,6 @@ let g:airline_powerline_fonts = 1
 " Markdown
 augroup pencil
   autocmd!
-  autocmd FileType markdown,mkd call pencil#init()
+"  autocmd FileType markdown,mkd call pencil#init()
   autocmd FileType text         call pencil#init()
 augroup END
