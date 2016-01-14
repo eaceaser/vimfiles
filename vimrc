@@ -67,7 +67,11 @@ filetype plugin indent on
 " Font
 set antialias
 "set gfn=Monaco\ for\ Powerline:h11
-set macligatures
+if has("gui_macvim")
+  set macligatures
+endif
+
+
 set gfn=Fira\ Code:h12
 " set gfn=fixed-6x13:h13
 
