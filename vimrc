@@ -10,6 +10,7 @@ set t_Co=256
 set wildmenu
 set wildmode=longest:full
 set hidden
+set number
 set nocompatible
 set cmdheight=2
 set ttyfast
@@ -65,7 +66,9 @@ filetype plugin indent on
 
 " Font
 set antialias
-set gfn=Anonymice\ Powerline:h12
+"set gfn=Monaco\ for\ Powerline:h11
+set macligatures
+set gfn=Fira\ Code:h12
 " set gfn=fixed-6x13:h13
 
 " colors
@@ -115,9 +118,6 @@ set efm=%E\ %#[error]\ %f:%l:\ %m,%C\ %#[error]\ %p^,%-C%.%#,%Z,
 " let g:zenburn_high_Contrast=1
 colorscheme molokai
 
-map <F8> :set number!<CR>
-map! <F8> :set number!<CR>
-
 " wtf
 "hi scalaNew gui=underline
 "hi scalaMethodCall gui=italic
@@ -141,10 +141,3 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
 
 let g:airline_powerline_fonts = 1
-
-" Markdown
-augroup pencil
-  autocmd!
-"  autocmd FileType markdown,mkd call pencil#init()
-  autocmd FileType text         call pencil#init()
-augroup END
