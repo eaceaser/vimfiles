@@ -122,6 +122,13 @@ set efm=%E\ %#[error]\ %f:%l:\ %m,%C\ %#[error]\ %p^,%-C%.%#,%Z,
 " let g:zenburn_high_Contrast=1
 colorscheme molokai
 
+" Cursor
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+:autocmd InsertEnter * set cul
+:autocmd InsertLeave * set nocul
+
 " wtf
 "hi scalaNew gui=underline
 "hi scalaMethodCall gui=italic
@@ -145,3 +152,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
 
 let g:airline_powerline_fonts = 1
+
+
+" JSON
+let g:vim_json_syntax_conceal = 0 
