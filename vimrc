@@ -7,7 +7,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'PProvost/vim-ps1'
 Plug 'Yggdroot/indentLine'
-
+Plug 'airblade/vim-gitgutter'
 Plug 'leafgarland/typescript-vim'
 Plug 'Valloric/YouCompleteMe'
 
