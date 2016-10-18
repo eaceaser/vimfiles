@@ -5,50 +5,70 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tomasr/molokai'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
+Plug 'PProvost/vim-ps1'
+Plug 'Yggdroot/indentLine'
+
+Plug 'leafgarland/typescript-vim'
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
+filetype plugin on
+filetype indent on
+
+set autoread
+
+
+set ttyfast
+
+" wildmenu
+set wildmenu
+set wildignore=*.o,*~,*.pyc
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+
+
+" backspace
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+" searching
+set hlsearch
+set smartcase
+set ignorecase
+set incsearch
+
+" other interface
+set ruler
+set cmdheight=2
+set hidden
+
+" match brackets
+set showmatch
+set mat=2
+
+" regex
+set magic
+
+" stfu
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+" margin
+set foldcolumn=1
+
+""""
+" Colors
+"""""
+syntax enable
 colorscheme molokai
+set background=dark
 
-" General
-"set shell=/bin/sh
-"syntax enable
-"set autoread
-"set t_Co=256
-
-" Interface
-" set wildmenu
-" set wildmode=longest:full
-" set hidden
-" set number
-" set nocompatible
-" set cmdheight=2
-" set ttyfast
-" set smartcase
-" set hlsearch
-" set list
-" set shortmess=atI
-" set ruler
-" set listchars=tab:>-,trail:.
-" set ignorecase
-" set incsearch
-" set magic
-" set mouse=a
-" set showmatch
-" set gdefault
-" set noerrorbells
-" set completeopt=menuone,longest
-" set switchbuf=usetab
-
-" Spellcheck
-" set spell
-" set spelllang=en
-" 
-" Bundle 'airblade/vim-gitgutter'
-" 
-" filetype plugin indent on
-
-" Font
+"""
+" Fonts
+"""
+set encoding=utf8
 set antialias
 "set gfn=Monaco\ for\ Powerline:h11
 if has("gui_macvim")
@@ -56,38 +76,40 @@ if has("gui_macvim")
 endif
 
 set gfn=Fira\ Code:h12
-" set gfn=fixed-6x13:h13
 
-" colors
-set bg=dark
 
 " swaps and backup
-set backup
-set backupdir=~/.vim/backup
+set nobackup
+set nowb
 set directory=~/.vim/tmp
 set undofile
 set undodir=~/.vim/undo
 
-" enc
-set encoding=utf-8
 
 " tabs and indentation
-" set expandtab
-" set linebreak
-" set shiftwidth=2
-" set tabstop=2
-" set softtabstop=2
-" set backspace=2
-" set autoindent
-" set smartindent
-" set nowrap
+set expandtab
+set smarttab
+
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+
+set linebreak
+set tw=500
+
+set autoindent
+set smartindent
+set nowrap
 
 " statusline
-" set laststatus=2
+set laststatus=2
 " set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
-" searching
-" set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,*.class
+" GUI
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
 
 " folds
 " set foldmethod=syntax
